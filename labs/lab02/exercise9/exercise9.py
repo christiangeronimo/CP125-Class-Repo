@@ -10,10 +10,9 @@ def can_level_up(xp_remaining, xp_required):
     return xp_remaining >= xp_required
 
 
-def simulate_leveling(total_xp):
+def calculate_final_level(total_xp):
     """
-    Simulate leveling with given XP.
-    Returns: (final_level, remaining_xp)
+    Calculate the final level reached.
     """
     level = 1
     xp_remaining = total_xp
