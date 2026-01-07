@@ -14,7 +14,7 @@
 def get_total_value(quantities, prices):
     total = 0
     for i in range(len(quantities)):
-        total = total + quantities[i] * prices[i]
+        total += quantities[i] * prices[i]
     return total
 
 
@@ -22,7 +22,7 @@ def find_low_stock(quantities, threshold):
     low_items = []
     for i in range(len(quantities)):
         if quantities[i] < threshold:
-            low_items.append(quantities[i])
+            low_items.append(i)   # store index, not quantity
     return low_items
 
 
@@ -31,13 +31,18 @@ def calculate_restock_cost(quantities, prices, threshold, restock_qty):
     total_cost = 0
     for i in range(len(low_indices)):
         index = low_indices[i]
-        total_cost = prices[index] * restock_qty
+        total_cost = total_cost + prices[index] * restock_qty
     return total_cost
 
 
 # Test
 quantities = [50, 5, 100, 3, 25]
 prices = [10.00, 25.00, 5.00, 50.00, 15.00]
+
 print(f"Total value: ${get_total_value(quantities, prices):.2f}")
 print(f"Low stock (<10): {find_low_stock(quantities, 10)}")
 print(f"Restock cost: ${calculate_restock_cost(quantities, prices, 10, 20):.2f}")
+
+
+
+
