@@ -1,10 +1,12 @@
 
-def was_backward_detected(waypoints):
-    """
-    Return True if drone moved backward in x or y, False otherwise.
-    Use tuple unpacking.
-    """
-    pass
+def was_backward_detected(path):
+    for i in range(1, len(path)):
+        x1 , y1 , z1 = path [i - 1]
+        x2 , y2 , z2 = path [i]
+
+        if x2 < x1 or y2 < y1 :
+            return True 
+    return False 
 
 
 # Test
