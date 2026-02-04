@@ -9,5 +9,7 @@ def synchronize_databases(legacy_list, modern_set, blacklist):
 
     return lost_id ,ghost_id
 
-
+legacy = [(1, "a@b.com"), (2, "c@d.com")]
+modern = {1, 3}
+lost, ghost = synchronize_databases(legacy, modern, set())
 
