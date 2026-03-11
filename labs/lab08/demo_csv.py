@@ -3,7 +3,7 @@ import csv
 
 # Read CSV file
 print("=== Reading CSV ===")
-f = open("data/students.csv", "r", newline="")
+f = open("labs/lab08/data/students.csv", "r", newline="")
 reader = csv.reader(f)
 
 for row in reader:
@@ -13,7 +13,7 @@ f.close()
 
 # Write CSV file
 print("\n=== Writing CSV ===")
-f = open("data/output.csv", "w", newline="")
+f = open("labs/lab08/data/output.csv", "w", newline="")
 writer = csv.writer(f)
 
 # Write header
