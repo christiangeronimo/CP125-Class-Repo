@@ -1,25 +1,12 @@
 def merge_lists(file1, file2, output_file):
-    """
-    Merge two lists of names, remove duplicates, and sort.
-
-    Args:
-        file1: path to first list file
-        file2: path to second list file
-        output_file: path to output file
-
-    Returns:
-        int: count of unique names
-    """
 
     f = open(file1, 'r') 
     list1 = f.readlines()
 
-    
     g = open(file2, 'r')
     list2 = g.readlines()
 
     unique_names = []
-
 
     for name in list1 + list2:
         if name not in unique_names:  
