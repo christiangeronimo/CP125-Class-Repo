@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data
-df = pd.read_csv("data/students.csv")
+df = pd.read_csv("labs/lab09/data/students.csv")
 
 # Plot Math scores using DataFrame column
 plt.plot(df.index, df['Math'])

@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load data
-df = pd.read_csv("data/students.csv")
+df = pd.read_csv("labs/lab09/data/students.csv")
 
 # Plot both subjects on same chart with transparency
 plt.hist(df['Math'], bins=10, alpha=0.5, label="Math")

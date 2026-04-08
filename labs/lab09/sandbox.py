@@ -15,4 +15,4 @@ students = pd.DataFrame({
 })
 
 print(students)
-print(f"\nAverage Math: {students['Math'].mean()}")
+print(f"\nMax Science: {students['Science'].max()}")
